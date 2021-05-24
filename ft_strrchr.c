@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/15 18:00:20 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/05/22 21:31:58 by msayuri-         ###   ########.fr       */
+/*   Created: 2021/05/22 21:22:40 by msayuri-          #+#    #+#             */
+/*   Updated: 2021/05/22 21:32:52 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stddef.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
+	size_t	s_len;
 
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-size_t	ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-
-#endif
+	s_len = ft_strlen(s);
+	i = s_len;
+	while (*(s + i) != c)
+	{
+		if (i == 0)
+			return (NULL);
+		i--;
+	}
+	return ((char *)(s + i));
+}
