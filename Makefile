@@ -3,7 +3,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 NAME	= libft.a
 
-SRCS	= ft_strchr.c ft_strrchr.c ft_isalpha.c ft_isdigit.c ft_strjoin.c ft_strlen.c ft_strtrim.c ft_substr.c
+SRCS	= ft_strchr.c ft_strrchr.c ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strjoin.c ft_strlen.c ft_strtrim.c ft_substr.c
 OBJS	= $(SRCS:.c=.o)
 HEADERS	= libft.h
 
@@ -27,7 +27,7 @@ re: fclean all
 
 test: all clean
 		norminette ft_*.c *.h
-		gcc -static test.c -L. -I. -lft -o a.out
+		gcc -static test.c -L. -I. -lft -lbsd -o a.out
 		./a.out
 
 .PHONY: all clean fclean re
