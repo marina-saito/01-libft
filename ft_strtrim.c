@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	if (end < start)
 		end = start;
-	trimmed = malloc (sizeof(char) * (end - start + 1));
+	trimmed = malloc (sizeof(char) * (end - start + 2));
 	if (trimmed == NULL)
 		return (NULL);
 	i = 0;
