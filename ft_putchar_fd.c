@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/03 07:06:33 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/06 18:03:40 by msayuri-         ###   ########.fr       */
+/*   Created: 2021/06/06 17:04:41 by msayuri-          #+#    #+#             */
+/*   Updated: 2021/06/06 17:10:06 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	char	*s;
-
-	i = 0;
-	s = (char *)dst;
-	while (i < n)
-	{
-		*(s + i) = *((char *)src + i);
-		i++;
-	}
-	return ((void *)s);
+	write(fd, &c, 1);
 }
