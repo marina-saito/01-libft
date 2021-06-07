@@ -27,7 +27,7 @@ re: fclean all
 
 test: all
 		norminette ft_*.c *.h
-		gcc -static test.c -L. -I. -lft -lbsd -o a.out
+		gcc -static ../tests/01-libft/test.c -L. -I. -lft -lbsd -o a.out
 		./a.out
 
 .PHONY: all clean fclean re
