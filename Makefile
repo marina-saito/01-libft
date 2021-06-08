@@ -1,4 +1,4 @@
-CC		= gcc
+CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
 
 NAME	= libft.a
@@ -27,7 +27,7 @@ re: fclean all
 
 test: all
 		norminette ft_*.c *.h
-		gcc -static ../tests/01-libft/test.c -L. -I. -lft -lbsd -o a.out
+		$(CC) ../tests/01-libft/test.c -L. -I. -lft -lbsd -o a.out
 		./a.out
 
 .PHONY: all clean fclean re
