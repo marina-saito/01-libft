@@ -9,6 +9,14 @@ HEADERS	= libft.h
 
 RM		= rm -f
 
+UNAME	= $(shell uname)
+
+ifeq ($(UNAME), Darwin)
+	LIBFLAGS = -L. -I. -lft
+else
+	LIBFLAGS = -L. -I. -lft -lbsd
+endif
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -27,7 +35,7 @@ re: fclean all
 
 test: all
 		norminette ft_*.c *.h
-		$(CC) ../tests/01-libft/test.c -L. -I. -lft -lbsd -o a.out
+		$(CC) ../tests/01-libft/test.c $(LIBFLAGS) -o a.out
 		./a.out
 
 .PHONY: all clean fclean re
