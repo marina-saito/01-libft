@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 20:56:33 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/05/22 21:32:42 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/08 21:12:46 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (*(s + i) != c)
+	while (*(s + i) != (char)c)
 	{
 		if (*(s + i) == '\0')
 			return (NULL);
