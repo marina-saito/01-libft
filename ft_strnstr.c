@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 22:27:18 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/05/30 00:06:41 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/09 07:56:54 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		if (j == needle_len)
 			return ((char *)(haystack + i - j));
+		if (j > 0)
+			i = i - j;
 		i++;
 	}
 	return (NULL);
