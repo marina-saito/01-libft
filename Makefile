@@ -35,7 +35,13 @@ re: fclean all
 
 test: all
 		norminette ft_*.c *.h
-		$(CC) ../tests/01-libft/test.c $(LIBFLAGS) -o a.out
+		$(CC) ../tests/01-libft/mss/test.c $(LIBFLAGS) -o a.out
 		./a.out
+
+warmachine:
+		cd ../tests/01-libft/warmachine && bash grademe.sh
+
+tripo:
+		cd ../tests/01-libft/tripouille && $(MAKE) a
 
 .PHONY: all clean fclean re
