@@ -11,6 +11,8 @@ RM		= rm -f
 
 UNAME	= $(shell uname)
 
+FUN		=
+
 ifeq ($(UNAME), Darwin)
 	LIBFLAGS = -L. -I. -lft
 else
@@ -39,7 +41,7 @@ test: all
 		./a.out
 
 warmachine:
-		cd ../tests/01-libft/warmachine && bash grademe.sh
+		cd ../tests/01-libft/warmachine && bash grademe.sh $(FUN)
 
 tripo:
 		cd ../tests/01-libft/tripouille && $(MAKE) a

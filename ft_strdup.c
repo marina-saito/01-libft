@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 22:11:26 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/09 22:14:34 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/10 05:46:49 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	s1_len = ft_strlen(s1);
-	dupstr = malloc(sizeof(char) * s1_len);
+	dupstr = malloc(sizeof(char) * (s1_len + 1));
 	if (dupstr == NULL)
 		return (NULL);
 	i = 0;
