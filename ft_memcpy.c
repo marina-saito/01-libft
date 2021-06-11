@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 07:06:33 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/11 20:51:29 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/11 20:53:57 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	s = (char *)dst;
 	if (src == NULL || dst == NULL)
-		return (NULL);
+		return (dst);
 	while (i < n)
 	{
 		*(s + i) = *((char *)src + i);
