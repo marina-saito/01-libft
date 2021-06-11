@@ -44,6 +44,6 @@ warmachine:
 		cd ../tests/01-libft/warmachine && bash grademe.sh $(FUN)
 
 tripo:
-		cd ../tests/01-libft/tripouille && $(MAKE) a
+		cd ../tests/01-libft/tripouille && $(MAKE) m
 
 .PHONY: all clean fclean re
