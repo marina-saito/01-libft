@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 08:12:24 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/09 08:47:28 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/12 09:49:12 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	**ft_split(char const *str, char c)
 
 	str_len = ft_strlen(str);
 	splitted = malloc(sizeof(char *) * (count_splits(str, c) + 1));
+	if (splitted == NULL)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (i < str_len)
