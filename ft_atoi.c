@@ -34,8 +34,6 @@ int	ft_atoi(const char *str)
 	while (*(str + i) >= '0' && *(str + i) <= '9')
 	{
 		res = res * 10 + (*(str + i) - 48);
-		ft_putnbr_fd(res, 1);
-		ft_putstr_fd("\n", 1);
 		i++;
 	}
 	res *= sign;

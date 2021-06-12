@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 07:06:33 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/12 09:22:35 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/12 09:30:14 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*dst_temp;
 	char	*src_temp;
 
-	if (!dst)
-		return (NULL);
 	i = 0;
 	dst_temp = (char *)dst;
 	src_temp = (char *)src;
