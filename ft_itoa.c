@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 12:53:14 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/06 15:26:01 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/11 21:40:58 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_itoa(int n)
 	if (n <= 0)
 		str_len++;
 	str = malloc(sizeof(char) * (str_len + 1));
+	if (str == NULL)
+		return (NULL);
 	ft_itoa_aux(n, str_len - 1, str);
 	str[str_len] = '\0';
 	return (str);
