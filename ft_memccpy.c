@@ -6,7 +6,7 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 07:06:33 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/12 09:35:16 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/12 09:36:31 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*src_copy;
 
 	i = 0;
-	dst_copy = (char *)dst;
-	src_copy = (char *)src;
+	dst_copy = (unsigned char *)dst;
+	src_copy = (unsigned char *)src;
 	while (i < n)
 	{
 		*(dst_copy + i) = *(src_copy + i);
