@@ -6,12 +6,18 @@
 /*   By: msayuri- <msayuri-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 18:00:20 by msayuri-          #+#    #+#             */
-/*   Updated: 2021/06/10 07:35:12 by msayuri-         ###   ########.fr       */
+/*   Updated: 2021/06/12 10:04:29 by msayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+typedef struct s_list
+{
+	void	*content;
+	struct	s_list *next;
+}	t_list;
 
 # include <stdlib.h>
 # include <stddef.h>
